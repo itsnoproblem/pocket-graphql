@@ -11,7 +11,7 @@ sources:
     handler:
       openapi:
         source: ./rpc-spec-rc-0.7.0.1.yaml
-        baseUrl: "https://node-000.pokt.gaagl.com/v1"
+        baseUrl: "{env.POCKET_RPC_URL}"
         selectQueryOrMutationField:
           - title: "Pocket Network"
             path: /query/account
