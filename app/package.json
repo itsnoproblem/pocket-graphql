@@ -1,0 +1,13 @@
+{
+  "name": "poktql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "@itsnoproblem",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.44.5",
+    "@graphql-mesh/openapi": "^0.22.2",
+    "@graphql-mesh/transform-cache": "^0.11.6",
+    "graphql": "^16.2.0"
+  }
+}

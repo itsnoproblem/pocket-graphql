@@ -1,0 +1,95 @@
+serve:
+  port: 4000
+  hostname: 0.0.0.0
+transforms:
+  - cache:
+      - field: Query.transaction
+  - cache:
+      - field: Query.block
+sources:
+  - name: Pocket Network
+    handler:
+      openapi:
+        source: ./rpc-spec-rc-0.7.0.1.yaml
+        baseUrl: "https://node-000.pokt.gaagl.com/v1"
+        selectQueryOrMutationField:
+          - title: "Pocket Network"
+            path: /query/account
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/accounttxs
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/tx
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/allParams
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/app
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/apps
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/balance
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/block
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/blocktxs
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/height
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/param
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/nodeclaim
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/nodeclaims
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/signinginfo
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/node
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/nodes
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/supply
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/supportedchains
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/tx
+            method: post
+            type: Query
+          - title: "Pocket Network"
+            path: /query/upgrade
+            method: post
+            type: Query
